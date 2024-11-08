@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>文件统计结果</title>
+    <style>
+        body { 
+            font-family: 'Microsoft YaHei', sans-serif; 
+            margin: 40px auto; 
+            max-width: 800px; 
+            line-height: 1.6; 
+            background: url("https://t.mwm.moe/pc"); 
+            background-size: cover;
+            min-height: 100vh;
+        }
+        .container { 
+            background: #f5f5f5; 
+            opacity : 0.9;
+            padding: 20px; 
+            border-radius: 8px; 
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); 
+        }
+        h1 { 
+            color: #333; 
+            text-align: center; 
+        }
+        .stats-item { 
+            background: white; 
+            margin: 10px 0; 
+            padding: 15px; 
+            border-radius: 4px; 
+            transition: all 0.3s ease; 
+        }
+        .stats-item:hover { 
+            background: white; 
+            transform: translateY(-5px); 
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+        }
+        .divider { 
+            border-top: 2px solid #ddd; 
+            margin: 20px 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Example_result - 统计结果</h1>
+        <div class="divider"></div>
+        <div class="stats-item">输入文件：F:\VScode\C\program_design\Class/Example.txt</div>
+        <div class="stats-item">1. 单词总数：6</div>
+        <div class="stats-item">2. 字母总数：21</div>
+        <div class="stats-item">3. 数字字符数：9</div>
+        <div class="stats-item">4. 空格字符数：4</div>
+        <div class="stats-item">5. 换行符数：4</div>
+        <div class="stats-item">6. 标点符号数：16</div>
+        <div class="stats-item">7. 其他字符数：10</div>
+    </div>
+</body>
+</html>
