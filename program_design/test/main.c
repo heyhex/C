@@ -23,14 +23,17 @@ const char* SUMMARY_HTML_HEADER =
 "            line-height: 1.6; \n"
 "            background: url(\"https://t.mwm.moe/pc\"); \n"
 "            background-size: cover;\n"
-"            min-height: 100vh;"
+"            background-attachment: fixed;\n"
+"            min-height: 100vh;\n"
 "        }\n"
 "        .container { \n"
-"            background: #f5f5f5; \n"
-"            opacity : 0.9;\n"
+"            background: rgba(255, 255, 255, 0.7); \n"
+"            backdrop-filter: blur(10px); \n"
+"            -webkit-backdrop-filter: blur(10px); \n"
 "            padding: 20px; \n"
 "            border-radius: 8px; \n"
-"            box-shadow: 0 2px 4px rgba(0,0,0,0.1); \n"
+"            box-shadow: 0 4px 15px rgba(0,0,0,0.1); \n"
+"            border: 1px solid rgba(255, 255, 255, 0.3); \n"
 "        }\n"
 "        h1 { \n"
 "            color: #333; \n"
@@ -41,7 +44,7 @@ const char* SUMMARY_HTML_HEADER =
 "            background: white; \n"
 "            margin: 10px 0; \n"
 "            padding: 15px; \n"
-"            border-radius: 4px; \n"
+"            border-radius: 8px; \n"
 "            text-decoration: none; \n"
 "            color: #2196F3; \n"
 "            transition: all 0.3s ease; \n"
@@ -221,7 +224,7 @@ void processBatchFiles(const char* folderPath) {
         return;
     }
 
-    // 收集所有txt文件
+    // 收集所��txt文件
     // readdir函数用于读取目录中的每个文件
     while ((entry = readdir(dir)) != NULL) {
         // 如果文件名以.txt结尾
@@ -270,7 +273,7 @@ void processBatchFiles(const char* folderPath) {
         processTime = executeCommand(command);
         printf("文件统计耗时：%.2f秒\n", processTime);
 
-        // 调用显示程序（始终使用静默���式）
+        // 调用显示程序（始终使用静默式）
         sprintf(command, "display.exe \"%s\" -s", resultPath);
         processTime = executeCommand(command);
         printf("HTML生成耗时：%.2f秒\n", processTime);

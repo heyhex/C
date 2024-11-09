@@ -1,6 +1,6 @@
 统计结果报告
 ====================
-输入文件：F:\VScode\C\program_design\Class/Example.txt
+输入文件：Example.txt
 
 1. 单词总数：6
 2. 字母总数：21
